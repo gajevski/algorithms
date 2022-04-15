@@ -16,8 +16,6 @@ console.log(search(array, array.length, 5));
 
 // LEPSZE WYSZUKIWANIE LINIOWE
 
-const array = [1, 2, 3, 4, 5];
-
 function search(array, length, target) {
   for (let i = 0; i < length; i++) {
     if (array[i] === target) {
@@ -30,16 +28,14 @@ console.log(search(array, array.length, 5));
 
 // WYSZUKIWANIE LINIOWE Z WARTOWNIKIEM
 
-const array = [1, 2, 3, 4, 5];
-
 function search(array, length, target) {
   const last = array[length - 1];
   array[length - 1] = target;
   let i = 0;
   while (array[i] !== target) i++;
   array[length - 1] = last;
-  if (i < length - 1 || array[length - 1] === target) console.log(i);
-  else console.log('Not found');
+  if (i < length - 1 || array[length - 1] === target) return i;
+  else return 'Not found';
 }
 
-search(array, array.length, 1);
+console.log(search(array, array.length, 5));
