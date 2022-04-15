@@ -1,14 +1,14 @@
 function selectionSort(array) {
     for (let i = 0; i < array.length; i++) {
-        let smallest = i;
+        let min = i;
         for (let j = i + 1; j < array.length; j++) {
-            if (array[j] < array[smallest]) {
-                smallest = j;
+            if (array[j] < array[min]) {
+                min = j;
             }
         }
         let temp = array[i];
-        array[i] = array[smallest];
-        array[smallest] = temp;
+        array[i] = array[min];
+        array[min] = temp;
     }
     return array;
 }
